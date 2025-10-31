@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useCart } from "../context/CartContext";
 import pic1 from "../assets/NIGERIA_X_BRAZIL_4.avif";
 import pic2 from "../assets/nigxbra2.avif";
 import pic3 from "../assets/nigxbra3.avif";
@@ -19,7 +18,6 @@ const NigeriaXBrazil = () => {
   const [openDesc, setOpenDesc] = useState(false);
   const [openSpec, setOpenSpec] = useState(false);
   const [openShip, setOpenShip] = useState(false);
-  const { addToCart } = useCart();
 
   function increament() {
     setCount(count + 1);

@@ -3,7 +3,6 @@ import pic1 from "../assets/nigxbrayellow 1.avif";
 import pic2 from "../assets/nigxbrayellow 2.avif";
 import pic3 from "../assets/nigxbrayellow 3.avif";
 import short from "../assets/NIGERIAXBRAZILFOOTBALL SHORTS.png";
-import socks from "../assets/socks.avif";
 import { MdKeyboardArrowDown, MdKeyboardArrowRight } from "react-icons/md";
 import { PiShareFatLight } from "react-icons/pi";
 import Customer from "./Customer";
