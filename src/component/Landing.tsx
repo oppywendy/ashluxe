@@ -1,4 +1,3 @@
-import vid from "../assets/landing video.webm";
 import pic1 from "../assets/hero pic.avif";
 import pic2 from "../assets/hero 2.avif";
 
@@ -7,12 +6,12 @@ const Landing = () => {
     <div>
       <div>
         <video
-          src={vid}
+          src="/landing-video.webm"
           autoPlay
           playsInline
           loop
           muted
-          className="w-full"
+          className="w-full h-auto object-cover"
         ></video>
         <div className="flex flex-col lg:flex-row lg:items-center px-2 justify-center gap-2 lg:justify-between h-[20vh] lg:h-[10vh]">
           <p>Introducing the Summer Capsule</p>
