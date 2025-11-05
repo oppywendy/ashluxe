@@ -895,9 +895,9 @@ const Hero = () => {
         </div>
       </div>
       <div className="bg-[#EFEFEF] w-full h-[30vh] lg:h-[65vh] justify-center items-center flex">
-        <div className="w-[70%] lg:w-full">
+        <div className="w-[70%] lg:w-[35%]">
           <h1 className="text-2xl lg:text-5xl">Be First. Never Follow.</h1>
-          <p className="text-center pt-5 lg:pt-10 text-gray-400">
+          <p className="text-center pt-5 text-gray-400">
             Access the latest drops and insider exclusives.
           </p>
           <div className="w-full relative mt-5">
