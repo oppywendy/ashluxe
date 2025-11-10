@@ -1,8 +1,7 @@
 import { useState } from "react";
-import pic1 from "../assets/NIGERIA_X_BRAZIL_4.avif";
-import pic2 from "../assets/nigxbra2.avif";
-import pic3 from "../assets/nigxbra3.avif";
-import slide from "../assets/slide4.avif";
+import pic1 from "../assets/hoodie 2.avif";
+import pic2 from "../assets/MASKGRAPHICSWEATSHIRT1.avif";
+import pic3 from "../assets/MASKGRAPHICSWEATSHIRT2.avif";
 import { MdKeyboardArrowDown, MdKeyboardArrowRight } from "react-icons/md";
 import { PiShareFatLight } from "react-icons/pi";
 import Customer from "./Customer";
@@ -11,14 +10,14 @@ import { useCart } from "../context/CartContext";
 
 const pictures = [pic1, pic2, pic3];
 
-const NigeriaXBrazil = () => {
+const MaskGraphic = () => {
   const [display, setDisplay] = useState(pic1);
   const [count, setCount] = useState(1);
-  const [value, setValue] = useState("");
   const [openDesc, setOpenDesc] = useState(false);
   const [openSpec, setOpenSpec] = useState(false);
   const [openShip, setOpenShip] = useState(false);
 
+  // ✅ Use global cart context
   const { addToCart } = useCart();
 
   const increment = () => setCount((prev) => prev + 1);
@@ -27,8 +26,8 @@ const NigeriaXBrazil = () => {
   const handleAddToCart = () => {
     const product = {
       id: 1,
-      name: "Nigeria X Brazil Football Shirt White",
-      price: 198,
+      name: "Mask Graphic Sweatshirt",
+      price: 187,
       quantity: count,
       image: display,
     };
@@ -36,14 +35,13 @@ const NigeriaXBrazil = () => {
     addToCart(product);
     alert(`${product.name} added to cart ✅`);
   };
-
   return (
     <div className="bg-[#F8F8F8]">
       {/* Breadcrumb */}
       <div className="flex pt-14 pb-5 pl-10 items-center gap-3">
         <p>Home</p>
         <MdKeyboardArrowRight />
-        <p className="text-sm">Nigeria X Brazil Football Shirt White</p>
+        <p className="text-sm">Mask Graphic Sweatshirt</p>
       </div>
 
       {/* Product Display */}
@@ -75,15 +73,13 @@ const NigeriaXBrazil = () => {
         {/* Right Info Section */}
         <div className="w-full lg:w-[50%] pt-5 px-5 lg:pr-10">
           <p className="text-black opacity-75">Ashluxe</p>
-          <h1 className="text-4xl pb-3">
-            Nigeria X Brazil Football Shirt White
-          </h1>
-          <b className="text-2xl opacity-70">$198</b>
+          <h1 className="text-4xl pb-3">Mask Graphic Sweatshirt</h1>
+          <b className="text-2xl opacity-70">$187</b>
 
           {/* Color */}
           <p className="pt-5 opacity-40 pb-2">Colour</p>
-          <div className="bg-white w-7 h-7 rounded-full border-black border-2"></div>
-          <p className="pt-2 text-sm opacity-80">White</p>
+          <div className="bg-black w-7 h-7 rounded-full border-black border-2"></div>
+          <p className="pt-2 text-sm opacity-80">Black</p>
 
           {/* Size */}
           <p className="opacity-40 pt-4">Size</p>
@@ -144,31 +140,6 @@ const NigeriaXBrazil = () => {
                 size={12}
                 className="absolute top-3 left-3"
               />
-            </div>
-          </div>
-
-          {/* Pair with products */}
-          <div className="pt-5">
-            <h1 className="text-center text-xl font-semibold">
-              Pairs well with
-            </h1>
-            <div className="flex flex-col sm:flex-row w-full justify-between pt-5 items-center sm:items-start gap-4">
-              <input type="checkbox" className="w-5" />
-              <img src={slide} alt="" className="w-28" />
-              <div className="flex flex-col items-center">
-                <h2 className="opacity-80">Ashluxe Emblem Leather slides</h2>
-                <select
-                  value={value}
-                  onChange={(e) => setValue(e.target.value)}
-                  className="w-28 py-1 border border-gray-300 rounded-md text-sm text-center my-3"
-                >
-                  <option value="">Green / XS</option>
-                  <option value="s">Green / S</option>
-                  <option value="m">Green / M</option>
-                  <option value="l">Green / L</option>
-                </select>
-                <p className="font-medium">$207.00</p>
-              </div>
             </div>
           </div>
         </div>
@@ -252,4 +223,4 @@ const NigeriaXBrazil = () => {
   );
 };
 
-export default NigeriaXBrazil;
+export default MaskGraphic;
