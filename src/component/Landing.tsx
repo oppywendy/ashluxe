@@ -11,7 +11,8 @@ const Landing = () => {
           playsInline
           loop
           muted
-          className="w-full h-auto object-cover"
+          preload="auto"
+          className="w-full h-[50vh] lg:h-[100vh] object-cover"
         ></video>
         <div className="flex flex-col lg:flex-row lg:items-center px-2 justify-center gap-2 lg:justify-between h-[20vh] lg:h-[10vh]">
           <p>Introducing the Summer Capsule</p>

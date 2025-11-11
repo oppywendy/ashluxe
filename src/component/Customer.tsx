@@ -85,17 +85,19 @@ const clothes = [
 const Customer = () => {
   return (
     <div>
-      <div className="min-h-max w-full max-w-screen mx-auto border p-20">
+      <div className="min-h-max w-full max-w-screen mx-auto border p-1 lg:p-20 pt-10 lg:pt-0">
         <div>
-          <h1 className="text-xl pt-5 font-medium">Customers also viewed</h1>
+          <h1 className="text-xl pt-5 pl-5 lg:pl-0 font-medium">
+            Customers also viewed
+          </h1>
           <div className="flex overflow-x-auto space-x-4 no-scrollbar pt-10">
             {clothes.map((cloth) => (
               <div
                 key={cloth.id}
                 onClick={() => (window.location.href = cloth.link)}
-                className="min-w-[300px] rounded-lg p-2 cursor-pointer group"
+                className="lg:min-w-[300px] rounded-lg p-2 cursor-pointer text-sm lg:text-lg group"
               >
-                <div className="relative w-64 h-80 overflow-hidden rounded-lg">
+                <div className="relative w-36 lg:w-64 h-48 lg:h-80 overflow-hidden rounded-lg">
                   <img
                     src={cloth.image}
                     alt=""
