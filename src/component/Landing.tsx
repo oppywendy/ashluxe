@@ -6,14 +6,17 @@ const Landing = () => {
     <div>
       <div>
         <video
-          src="/landing-video.webm"
           autoPlay
           playsInline
           loop
           muted
           preload="auto"
-          className="w-full h-[50vh] lg:h-[100vh] object-cover"
-        ></video>
+          className="w-full h-auto object-cover"
+        >
+          <source src="/landing-video.webm" type="video/webm" />
+          <source src="/landing_video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <div className="flex flex-col lg:flex-row lg:items-center px-2 justify-center gap-2 lg:justify-between h-[20vh] lg:h-[10vh]">
           <p>Introducing the Summer Capsule</p>
           <b>SHOP NOW</b>
